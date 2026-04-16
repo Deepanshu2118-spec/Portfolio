@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deepanshu Kumar — CSE Engineer</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300;400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            void:    '#04040a',
+            panel:   '#0c0c14',
+            glass:   '#11111d',
+            border:  '#1e1e2e',
+            cyan:    '#00d4ff',
+            green:   '#00ff88',
+            amber:   '#ffb700',
+            muted:   '#4a4a6a',
+            dim:     '#8888aa',
+          },
+          fontFamily: {
+            display: ['"Bebas Neue"', 'sans-serif'],
+            syne:    ['"Syne"', 'sans-serif'],
+            mono:    ['"Fira Code"', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-void font-mono text-dim overflow-x-hidden">
+
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="scanline"     aria-hidden="true"></div>
+
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <a href="#hero" class="font-display text-3xl tracking-widest text-cyan glitch-logo" data-text="DEEPANSHU.EXE">
+        DEEPANSHU<span class="text-green">.</span>EXE
+      </a>
+
+      <ul class="hidden md:flex items-center gap-8 font-mono text-sm">
+        <li><a href="#about"    class="nav-link">[ about ]</a></li>
+        <li><a href="#skills"   class="nav-link">[ skills ]</a></li>
+        <li><a href="#projects" class="nav-link">[ projects ]</a></li>
+        <li><a href="#contact"  class="nav-link">[ contact ]</a></li>
+      </ul>
+
+      <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 p-2 z-50" aria-label="Toggle menu">
+        <span class="ham-bar"></span>
+        <span class="ham-bar"></span>
+        <span class="ham-bar"></span>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu md:hidden">
+      <ul class="flex flex-col items-center gap-6 py-10 font-mono text-lg">
+        <li><a href="#about"    class="mobile-nav-link">[ about ]</a></li>
+        <li><a href="#skills"   class="mobile-nav-link">[ skills ]</a></li>
+        <li><a href="#projects" class="mobile-nav-link">[ projects ]</a></li>
+        <li><a href="#contact"  class="mobile-nav-link">[ contact ]</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="hero" class="min-h-screen flex items-center justify-center relative px-6 pt-20">
+
+    <div class="blob blob-cyan"  aria-hidden="true"></div>
+    <div class="blob blob-green" aria-hidden="true"></div>
+
+    <div class="max-w-5xl w-full z-10">
+
+      <div class="flex items-center gap-2 mb-6 fade-up" style="--delay: 0.1s">
+        <span class="status-dot"></span>
+        <span class="text-xs text-green font-mono tracking-widest uppercase">System Online // B.Tech CSE // 2025</span>
+      </div>
+
+      <h1 class="font-display text-7xl sm:text-9xl md:text-[10rem] leading-none text-white mb-4 fade-up" style="--delay: 0.2s">
+        DEEPANSHU
+      </h1>
+
+      <div class="text-cyan font-mono text-lg sm:text-2xl mb-8 fade-up h-8 flex items-center" style="--delay: 0.3s">
+        <span class="text-muted mr-2">$&gt;</span>
+        <span id="typing-text" class="typing-cursor"></span>
+      </div>
+
+      <p class="text-dim font-mono text-sm sm:text-base leading-relaxed max-w-2xl mb-10 fade-up" style="--delay: 0.4s">
+        A precision-driven Computer Science engineering student specializing in the intersection
+        of <span class="text-cyan">data analytics</span> and <span class="text-green">hardware implementation</span>.
+        Operating at the nexus of software and physical computing, I engineer optimized solutions
+        ranging from <span class="text-amber">data visualization protocols</span> to
+        <span class="text-cyan">real-time biofeedback systems</span>. My objective is to build
+        highly efficient, scalable technologies that bridge the gap between
+        <em>digital logic</em> and <em>physical execution</em>.
+      </p>
+
+      <div class="flex flex-wrap gap-4 fade-up" style="--delay: 0.5s">
+        <a href="#projects" class="btn-primary">
+          <span class="mr-2">▶</span> View Projects
+        </a>
+        <a href="mailto:deepanshu.kumar@email.com" class="btn-secondary">
+          <span class="mr-2">⌁</span> Open Channel
+        </a>
+      </div>
+
+      <div class="grid grid-cols-3 gap-4 mt-16 max-w-sm fade-up" style="--delay: 0.6s">
+        <div class="stat-card">
+          <span class="text-2xl font-display text-cyan">02</span>
+          <span class="text-xs text-muted mt-1">Projects</span>
+        </div>
+        <div class="stat-card">
+          <span class="text-2xl font-display text-green">05</span>
+          <span class="text-xs text-muted mt-1">Technologies</span>
+        </div>
+        <div class="stat-card">
+          <span class="text-2xl font-display text-amber">∞</span>
+          <span class="text-xs text-muted mt-1">Curiosity</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted fade-up" style="--delay: 0.9s">
+      <span class="text-xs tracking-widest">SCROLL</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <section id="about" class="py-28 px-6">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="section-header reveal">
+        <span class="label-tag">01 // ABOUT</span>
+        <h2 class="section-title">System <span class="text-cyan">Profile</span></h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 mt-14">
+
+        <div class="terminal-card reveal">
+          <div class="terminal-bar">
+            <span class="t-dot bg-red-500"></span>
+            <span class="t-dot bg-yellow-500"></span>
+            <span class="t-dot bg-green-500"></span>
+            <span class="ml-4 text-xs text-muted">deepanshu@portfolio ~ profile.sh</span>
+          </div>
+          <div class="p-6 space-y-3 text-sm">
+            <p><span class="text-green">const</span> <span class="text-cyan">engineer</span> = {'{'}</p>
+            <p class="pl-4"><span class="text-amber">name</span>: <span class="text-dim">"Deepanshu Kumar"</span>,</p>
+            <p class="pl-4"><span class="text-amber">degree</span>: <span class="text-dim">"B.Tech CSE"</span>,</p>
+            <p class="pl-4"><span class="text-amber">focus</span>: [</p>
+            <p class="pl-8 text-dim">"Data Analytics",</p>
+            <p class="pl-8 text-dim">"Hardware Systems",</p>
+            <p class="pl-8 text-dim">"Biofeedback Engineering"</p>
+            <p class="pl-4">],</p>
+            <p class="pl-4"><span class="text-amber">status</span>: <span class="text-green">"actively_building"</span>,</p>
+            <p class="pl-4"><span class="text-amber">contact</span>: <span class="text-cyan">"deepanshu.kumar@email.com"</span></p>
+            <p>{'}'}</p>
+          </div>
+        </div>
+
+        <div class="space-y-6 reveal">
+          <div class="info-block">
+            <h3 class="text-white font-syne font-bold text-lg mb-2">Mission Protocol</h3>
+            <p class="text-dim text-sm leading-relaxed">
+              Engineering at the crossroads of software intelligence and physical hardware.
+              I design systems that don't just run code — they interact with the real world,
+              from physiological sensors to dynamic data dashboards.
+            </p>
+          </div>
+          <div class="info-block">
+            <h3 class="text-white font-syne font-bold text-lg mb-2">Core Directives</h3>
+            <ul class="space-y-2 text-sm text-dim">
+              <li class="flex items-start gap-2"><span class="text-cyan mt-0.5">▸</span> Bridge digital logic with physical execution</li>
+              <li class="flex items-start gap-2"><span class="text-green mt-0.5">▸</span> Build scalable, optimized data pipelines</li>
+              <li class="flex items-start gap-2"><span class="text-amber mt-0.5">▸</span> Prototype real-time embedded systems</li>
+            </ul>
+          </div>
+          <div class="info-block">
+            <h3 class="text-white font-syne font-bold text-lg mb-2">Current Stack</h3>
+            <div class="flex flex-wrap gap-2 mt-2">
+              <span class="stack-tag cyan">Python</span>
+              <span class="stack-tag green">Arduino</span>
+              <span class="stack-tag amber">Tableau</span>
+              <span class="stack-tag cyan">C</span>
+              <span class="stack-tag green">Sensors</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="py-28 px-6 bg-panel">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="section-header reveal">
+        <span class="label-tag">02 // SKILLS</span>
+        <h2 class="section-title">Tech <span class="text-green">Arsenal</span></h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-10 mt-14">
+
+        <div class="skill-category reveal">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="cat-icon cyan">⬡</div>
+            <h3 class="font-syne font-bold text-white text-lg">Core Software &amp; Analytics</h3>
+          </div>
+          <div class="space-y-5">
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="text-sm text-white font-mono">Python</span>
+                <span class="text-xs text-cyan font-mono">Advanced</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill cyan" style="--pct: 88%"></div>
+              </div>
+              <div class="flex flex-wrap gap-2 mt-2">
+                <span class="mini-tag">Data Analysis</span>
+                <span class="mini-tag">Automation</span>
+                <span class="mini-tag">Visualization</span>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="text-sm text-white font-mono">C</span>
+                <span class="text-xs text-cyan font-mono">Proficient</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill cyan" style="--pct: 72%"></div>
+              </div>
+              <div class="flex flex-wrap gap-2 mt-2">
+                <span class="mini-tag">Systems</span>
+                <span class="mini-tag">Embedded</span>
+                <span class="mini-tag">Algorithms</span>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="text-sm text-white font-mono">Tableau</span>
+                <span class="text-xs text-cyan font-mono">Proficient</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill cyan" style="--pct: 78%"></div>
+              </div>
+              <div class="flex flex-wrap gap-2 mt-2">
+                <span class="mini-tag">Dashboards</span>
+                <span class="mini-tag">BI</span>
+                <span class="mini-tag">KPI Tracking</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="cat-icon green">⬡</div>
+            <h3 class="font-syne font-bold text-white text-lg">Hardware Implementation</h3>
+          </div>
+          <div class="space-y-5">
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="text-sm text-white font-mono">Microcontroller Logic</span>
+                <span class="text-xs text-green font-mono">Proficient</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill green" style="--pct: 80%"></div>
+              </div>
+              <div class="flex flex-wrap gap-2 mt-2">
+                <span class="mini-tag">Arduino</span>
+                <span class="mini-tag">GPIO</span>
+                <span class="mini-tag">Real-time</span>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="text-sm text-white font-mono">Sensor Integration</span>
+                <span class="text-xs text-green font-mono">Applied</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill green" style="--pct: 75%"></div>
+              </div>
+              <div class="flex flex-wrap gap-2 mt-2">
+                <span class="mini-tag">Biometric</span>
+                <span class="mini-tag">Temperature</span>
+                <span class="mini-tag">Pulse Ox</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-14 reveal">
+        <p class="text-xs text-muted tracking-widest uppercase mb-5">// Quick Reference Badges</p>
+        <div class="flex flex-wrap gap-3">
+          <span class="badge hover:-translate-y-1 hover:shadow-lg hover:shadow-cyan/20 transition-all duration-300 badge-cyan">Python</span>
+          <span class="badge hover:-translate-y-1 hover:shadow-lg hover:shadow-cyan/20 transition-all duration-300 badge-cyan">C</span>
+          <span class="badge hover:-translate-y-1 hover:shadow-lg hover:shadow-cyan/20 transition-all duration-300 badge-cyan">Tableau</span>
+          <span class="badge hover:-translate-y-1 hover:shadow-lg hover:shadow-green/20 transition-all duration-300 badge-green">Arduino Uno R4</span>
+          <span class="badge hover:-translate-y-1 hover:shadow-lg hover:shadow-green/20 transition-all duration-300 badge-green">Microcontrollers</span>
+          <span class="badge hover:-translate-y-1 hover:shadow-lg hover:shadow-green/20 transition-all duration-300 badge-green">Sensor Fusion</span>
+          <span class="badge hover:-translate-y-1 hover:shadow-lg hover:shadow-amber/20 transition-all duration-300 badge-amber">Data Analytics</span>
+          <span class="badge hover:-translate-y-1 hover:shadow-lg hover:shadow-amber/20 transition-all duration-300 badge-amber">Embedded Systems</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="py-28 px-6">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="section-header reveal">
+        <span class="label-tag">03 // PROJECTS</span>
+        <h2 class="section-title">Deployed <span class="text-amber">Modules</span></h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 mt-14">
+
+        <article class="project-card hover:-translate-y-1 hover:shadow-2xl hover:shadow-green/10 transition-all duration-300 reveal group">
+          <div class="p-7">
+            <div class="flex items-start justify-between mb-5">
+              <div class="project-icon green">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              </div>
+              <div class="flex gap-2">
+                <span class="proj-status green">ACTIVE</span>
+              </div>
+            </div>
+
+            <h3 class="font-syne font-bold text-white text-xl mb-3 group-hover:text-green transition-colors duration-300">
+              Smart Exam Stress Monitor
+            </h3>
+
+            <p class="text-dim text-sm leading-relaxed mb-5">
+              A portable biofeedback system engineered to measure physiological metrics — including
+              <span class="text-green">heart rate</span> and <span class="text-green">body temperature</span> —
+              under high-stress academic conditions. Built around the
+              <span class="text-white font-semibold">Arduino Uno R4 Minima</span>, this system provides
+              real-time physiological feedback to quantify and understand stress-response patterns during examinations.
+            </p>
+
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="proj-tag green">Arduino Uno R4</span>
+              <span class="proj-tag green">Sensor Integration</span>
+              <span class="proj-tag green">Biofeedback</span>
+              <span class="proj-tag green">Real-Time</span>
+              <span class="proj-tag green">C</span>
+            </div>
+
+            <div class="grid grid-cols-3 gap-3 pt-5 border-t border-border">
+              <div class="text-center">
+                <div class="text-lg font-display text-green">2</div>
+                <div class="text-xs text-muted">Sensors</div>
+              </div>
+              <div class="text-center">
+                <div class="text-lg font-display text-green">RT</div>
+                <div class="text-xs text-muted">Processing</div>
+              </div>
+              <div class="text-center">
+                <div class="text-lg font-display text-green">HW</div>
+                <div class="text-xs text-muted">Physical</div>
+              </div>
+            </div>
+          </div>
+          <div class="project-accent green"></div>
+        </article>
+
+        <article class="project-card hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan/10 transition-all duration-300 reveal group" style="--delay: 0.15s">
+          <div class="p-7">
+            <div class="flex items-start justify-between mb-5">
+              <div class="project-icon cyan">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              </div>
+              <div class="flex gap-2">
+                <span class="proj-status cyan">DATA</span>
+              </div>
+            </div>
+
+            <h3 class="font-syne font-bold text-white text-xl mb-3 group-hover:text-cyan transition-colors duration-300">
+              Data Visualization Dashboard
+            </h3>
+
+            <p class="text-dim text-sm leading-relaxed mb-5">
+              An end-to-end analytics pipeline that ingests raw, complex datasets using
+              <span class="text-cyan">Python (Pandas &amp; NumPy)</span>, applies preprocessing and statistical
+              analysis, then surfaces actionable insights through rich, interactive
+              <span class="text-cyan">Tableau</span> dashboards. Designed to transform high-volume data
+              into clear visual narratives for decision-making at scale.
+            </p>
+
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="proj-tag cyan">Python</span>
+              <span class="proj-tag cyan">Tableau</span>
+              <span class="proj-tag cyan">Pandas</span>
+              <span class="proj-tag cyan">Data Pipeline</span>
+              <span class="proj-tag cyan">Analytics</span>
+            </div>
+
+            <div class="grid grid-cols-3 gap-3 pt-5 border-t border-border">
+              <div class="text-center">
+                <div class="text-lg font-display text-cyan">∞</div>
+                <div class="text-xs text-muted">Scalable</div>
+              </div>
+              <div class="text-center">
+                <div class="text-lg font-display text-cyan">BI</div>
+                <div class="text-xs text-muted">Analytics</div>
+              </div>
+              <div class="text-center">
+                <div class="text-lg font-display text-cyan">SW</div>
+                <div class="text-xs text-muted">Software</div>
+              </div>
+            </div>
+          </div>
+          <div class="project-accent cyan"></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-28 px-6 bg-panel">
+    <div class="max-w-4xl mx-auto">
+
+      <div class="section-header reveal">
+        <span class="label-tag">04 // CONTACT</span>
+        <h2 class="section-title">Open <span class="text-cyan">Channel</span></h2>
+      </div>
+
+      <p class="text-dim text-sm mt-6 max-w-xl reveal">
+        Initiating contact is straightforward. Reach out for collaborations, project discussions,
+        or just to connect. All transmissions are monitored and responded to.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-10 mt-14">
+
+        <div class="contact-form-wrap reveal">
+          <div class="terminal-bar mb-0 rounded-t-lg">
+            <span class="t-dot bg-red-500"></span>
+            <span class="t-dot bg-yellow-500"></span>
+            <span class="t-dot bg-green-500"></span>
+            <span class="ml-4 text-xs text-muted">send_message.sh</span>
+          </div>
+          <form id="contact-form" class="bg-glass border-x border-b border-border rounded-b-lg p-7 space-y-5" novalidate>
+            <div class="form-group">
+              <label class="form-label">// Name</label>
+              <input type="text" name="name" placeholder="your_name" class="form-input" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">// Email</label>
+              <input type="email" name="email" placeholder="your@email.com" class="form-input" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">// Message</label>
+              <textarea name="message" rows="4" placeholder="type your message here..." class="form-input resize-none" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary w-full justify-center">
+              <span class="mr-2">⌁</span> Transmit Message
+            </button>
+            <div id="form-msg" class="hidden text-center text-sm text-green py-2">✓ Message queued for delivery.</div>
+          </form>
+        </div>
+
+        <div class="space-y-6 reveal">
+          <div class="contact-info-card group">
+            <div class="flex items-center gap-4">
+              <div class="contact-icon cyan">✉</div>
+              <div>
+                <p class="text-xs text-muted mb-1 tracking-widest">PRIMARY CHANNEL</p>
+                <a href="mailto:deepanshu.kumar@email.com" class="text-white font-mono text-sm hover:text-cyan transition-colors duration-200 break-all">
+                  deepanshu.kumar@email.com
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a href="mailto:deepanshu.kumar@email.com" class="direct-mail-btn group">
+            <div class="flex items-center gap-4">
+              <div class="mail-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 8.586 5.415a2 2 0 0 0 2.828 0L22 7"/></svg>
+              </div>
+              <div>
+                <p class="text-white font-syne font-bold text-base group-hover:text-cyan transition-colors duration-200">Open Email Client</p>
+                <p class="text-muted text-xs mt-0.5">Direct connection to deepanshu.kumar@email.com</p>
+              </div>
+              <span class="ml-auto text-cyan opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:translate-x-1">→</span>
+            </div>
+          </a>
+
+          <div class="contact-info-card">
+            <p class="text-xs text-muted tracking-widest mb-3">// SYSTEM STATUS</p>
+            <div class="space-y-2 text-sm">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-green animate-pulse"></span>
+                <span class="text-dim">Available for collaboration</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-cyan animate-pulse" style="animation-delay:0.5s"></span>
+                <span class="text-dim">Open to internship opportunities</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-amber animate-pulse" style="animation-delay:1s"></span>
+                <span class="text-dim">Response time: &lt; 24h</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-border py-8 px-6 text-center">
+    <p class="font-mono text-xs text-muted">
+      <span class="text-cyan">DEEPANSHU</span><span class="text-green">.</span><span class="text-cyan">EXE</span>
+      &nbsp;·&nbsp; B.Tech CSE &nbsp;·&nbsp;
+      <a href="mailto:deepanshu.kumar@email.com" class="hover:text-cyan transition-colors">deepanshu.kumar@email.com</a>
+      &nbsp;·&nbsp; Built with precision
+    </p>
+    <p class="text-muted text-xs mt-2 opacity-50">// System uptime nominal. All modules operational.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
